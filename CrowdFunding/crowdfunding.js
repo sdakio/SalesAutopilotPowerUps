@@ -38,6 +38,16 @@ mmjQuery(document).ready(function() {
         var netto   = brutto/vat_percent;
         mmjQuery('input[name="prod_price_' + onlyId+ '"]').val(netto);
         mmjQuery("#newtotal").html(brutto).show();
+        if (0<brutto) {
+             mmjQuery(".submitcontainer").show();
+        } else {
+             mmjQuery(".submitcontainer").hide();
+        }
     });
 });
 </script>
+<style>
+.submitcontainer {
+	display: none;
+}
+</style>
